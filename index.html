@@ -14,7 +14,7 @@
 	<!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>a
 	<![endif]-->
-	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
 	<script src="js/jquery.mixitup-loadmore.js"></script>
 	
@@ -36,7 +36,23 @@
       		  	filter: 'all'  
       				},
 
-      			      			
+      			loadmore: {
+          // The number of items to start with
+          initial: 10,
+          // The number of items to load on click on the loadmore button
+          loadMore: 10,
+          // A selector string for the existing wrapper the buttons will be inserted into
+          buttonWrapper: ".loadmore",
+          // The class of the Load more button
+          buttonClass: "loadmore-button",
+          // The label of the Load more button
+          buttonLabel: "Load more",
+          // The class of the less button
+          lessClass: "loadmore-less",
+          // The label of the less button
+          lessLabel: "Reset"
+        }
+      			
 				});								
 			
 		
@@ -86,9 +102,9 @@
 
 			<div class="portfolio testimonial" data-cat="testimonial">
 				<div class="portfolio-wrapper">			
-					<div class="video-responsive">
+					
 					<iframe width="360" height="215" src="https://www.youtube.com/embed/FTHoYXT-trQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-					</div>
+					
 					<div class="label">
 						<div class="label-text">
 							<a class="text-title" target="_blank" href="https://www.youtube.com/watch?v=FTHoYXT-trQ">Social Scene Testimonials</a>
@@ -104,9 +120,9 @@
 			
 			<div class="portfolio yacht" data-cat="yacht">
 				<div class="portfolio-wrapper">	
-				<div class="video-responsive">			
+						
 					<iframe width="360" height="215" src="https://www.youtube.com/embed/HXEgv1hQrXI" frameborder="0" allow="autoplay; encrypted-media" ></iframe>
-				</div>	
+			
 					<div class="label">
 						<div class="label-text">
 							<a class="text-title" target="_blank" href="https://www.youtube.com/HXEgv1hQrXI">2018 Chicago Air Show Yacht Party (Teaser)</a>
@@ -119,9 +135,9 @@
 
 			<div class="portfolio yacht" data-cat="yacht">
 				<div class="portfolio-wrapper">	
-				<div class="video-responsive">		
+					
 					<iframe width="360" height="215" src="https://www.youtube.com/embed/GVZ8QIZn9P8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-				</div>
+				
 					<div class="label">
 						<div class="label-text">
 							<a class="text-title" target="_blank" href="https://www.youtube.com/watch?v=GVZ8QIZn9P8&t=33s">2018 Chicago Air Show Yacht Party</a>
@@ -135,9 +151,9 @@
 			
 			<div class="portfolio spirits" data-cat="spirits">
 				<div class="portfolio-wrapper">
-				<div class="video-responsive">			
-					<iframe width="360" height="315" src="https://www.youtube.com/embed/o76OB2o1cKg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-				</div>
+						
+					<iframe width="360" height="215" src="https://www.youtube.com/embed/o76OB2o1cKg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			
 					<div class="label">
 						<div class="label-text">
 							<a class="text-title" target="_blank" href="https://www.youtube.com/watch?v=o76OB2o1cKg">2018 Summer Spirits Tasting Festival</a>
@@ -766,8 +782,8 @@
 			
 		</div>
 		<br>
-		<!-- <div class="loadmore"></div>	
-		 -->
+		<div class="loadmore"></div>	
+		
 	</div><!-- container -->
 
 	
