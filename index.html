@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	<title>Create A Simple Responsive Portfolio Page with Filtering and Hover Effect</title>
+	<meta name="description" content="In this tutorial, I'm going to show you how to create portfolio page with filtering and also hover effect for each of your project. We will be using a CSS3 and jQuery filter & sort plugin called MixItUp.">
+	<meta name="author" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/layout.css">
+
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>a
+	<![endif]-->
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
+	
+	
+	<script type="text/javascript">
+	$(function () {
+		
+		var filterList = {
+		
+			init: function () {
+			
+				// MixItUp plugin
+				// http://mixitup.io
+				$('#portfoliolist').mixItUp({
+  				selectors: {
+    			  target: '.portfolio',
+    			  filter: '.filter'	
+    		  },
+    		  	load: {
+      		  	filter: 'all'  
+      				},
+
+      			      			
+				});								
+			
+		
+
+
+
+			}
+
+		};
+		
+		// Run the show!
+		filterList.init();
+
+				
+		
+	});	
+
+	
+	</script>
+
+</head>
+<body>
+
+<div id="info">
+	<div class="info-wrapper">
+		<a href="http://www.queness.com/post/14577/create-a-simple-responsive-portfolio-page-with-filtering-and-hover-effect"><b>Social Scene Videos</b></a>
+		
+	</div>
+</div>	
+
+	<div class="container">
+		<ul id="filters" class="clearfix">
+			
+			<li><span class="filter active" data-filter=".testimonial, .weekly, .whiskey, .tequila, .logo, .web, .yacht, .spirits, .promotions, .bar, .wine">All</span></li>
+			<li><span class="filter" data-filter=".weekly">Weekly Conquers</span></li>
+			<li><span class="filter" data-filter=".bar">Bar Crawls</span></li>
+			<li><span class="filter" data-filter=".spirits">Spirits</span></li>
+			<li><span class="filter" data-filter=".tequila">Tequila</span></li>
+			<li><span class="filter" data-filter=".whiskey">Whiskey</span></li>
+			<li><span class="filter" data-filter=".wine">Wine</span></li>
+			<li><span class="filter" data-filter=".yacht">Yacht Party</span></li>
+			<li><span class="filter" data-filter=".testimonial">Testimonial</span></li>
+			<li><span class="filter" data-filter=".promotions">Promotions</span></li>
+		</ul>
+
+		<div id="portfoliolist">
+
+			<div class="portfolio testimonial" data-cat="testimonial">
+				<div class="portfolio-wrapper">			
+					<div class="video-responsive">
+					<iframe width="360" height="215" src="https://www.youtube.com/embed/FTHoYXT-trQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					</div>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title" target="_blank" href="https://www.youtube.com/watch?v=FTHoYXT-trQ">Social Scene Testimonials</a>
+							<!-- <span class="text-category">APP</span> -->
+						</div>
+						<div class="label-bg"></div>
+
+					</div>
+					<!-- <div class="description"> Description Here </div> -->
+				</div>
+
+			</div>	
+			
+			<div class="portfolio yacht" data-cat="yacht">
+				<div class="portfolio-wrapper">	
+				<div class="video-responsive">			
+					<iframe width="360" height="215" src="https://www.youtube.com/embed/HXEgv1hQrXI" frameborder="0" allow="autoplay; encrypted-media" ></iframe>
+				</div>	
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title" target="_blank" href="https://www.youtube.com/HXEgv1hQrXI">2018 Chicago Air Show Yacht Party (Teaser)</a>
+							<!-- <span class="text-category">Description</span> -->
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>				
+
+			<div class="portfolio yacht" data-cat="yacht">
+				<div class="portfolio-wrapper">	
+				<div class="video-responsive">		
+					<iframe width="360" height="215" src="https://www.youtube.com/embed/GVZ8QIZn9P8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+				</div>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title" target="_blank" href="https://www.youtube.com/watch?v=GVZ8QIZn9P8&t=33s">2018 Chicago Air Show Yacht Party</a>
+							<!-- <span class="text-category">Description</span> -->
+							<!-- <span class="text-category">APP</span> -->
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>		
+			
+			<div class="portfolio spirits" data-cat="spirits">
+				<div class="portfolio-wrapper">
+				<div class="video-responsive">			
+					<iframe width="360" height="315" src="https://www.youtube.com/embed/o76OB2o1cKg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+				</div>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title" target="_blank" href="https://www.youtube.com/watch?v=o76OB2o1cKg">2018 Summer Spirits Tasting Festival</a>
+							<!-- <span class="text-category">Description</span> -->
+							<!-- <span class="text-category">APP</span> -->
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>				
+			
+			<div class="portfolio weekly" data-cat="weekly">
+				<div class="portfolio-wrapper">			
+					<iframe width="360" height="215" src="https://www.youtube.com/embed/WA2l34mp8X8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title" target="_blank" href="https://www.youtube.com/watch?v=WA2l34mp8X8">Week 12 - Weekly Conquer - Recharge To Health - Create At 100</a>
+							<!-- <span class="text-category">Description</span> -->
+							<!-- <span class="text-category">APP</span> -->
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>	
+						
+			<div class="portfolio weekly" data-cat="weekly">
+				<div class="portfolio-wrapper">
+					<iframe width="360" height="215" src="https://www.youtube.com/embed/sLyCcLBudIk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title" target="_blank" href="https://www.youtube.com/watch?v=sLyCcLBudIk">Week 12 - Weekly Conquer - Be Present</a>
+							<!-- <span class="text-category">Description</span> -->
+							<!-- <span class="text-category">APP</span> -->
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>			
+			
+			<div class="portfolio spirits" data-cat="spirits">
+				<div class="portfolio-wrapper">
+					<iframe width="360" height="215" src="https://www.youtube.com/embed/IiNz2hq-5lM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title" target="_blank" href="https://www.youtube.com/watch?v=IiNz2hq-5lM">2018 Chicago Spirits Tasting Cruise</a>
+							<!-- <span class="text-category">Description</span> -->
+							<!-- <span class="text-category">APP</span> -->
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>	
+			
+			<div class="portfolio weekly" data-cat="weekly">
+				<div class="portfolio-wrapper">			
+					<iframe width="360" height="215" src="https://www.youtube.com/embed/OJZSgCWdCSk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title" target="_blank" href="https://www.youtube.com/watch?v=OJZSgCWdCSk">Weekly Conquer - Week 11 - Approach Connect Solve</a>
+							<!-- <span class="text-category">Description</span> -->
+							<!-- <span class="text-category">APP</span> -->
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>	
+			
+			<div class="portfolio weekly" data-cat="weekly">
+				<div class="portfolio-wrapper">			
+					<iframe width="360" height="215" src="https://www.youtube.com/embed/tk4o_jXbLTQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title" target="_blank" href="https://www.youtube.com/watch?v=tk4o_jXbLTQ">Weekly Conquer 11 - Push Through For Results</a>
+							<!-- <span class="text-category">Description</span> -->
+							<!-- <span class="text-category">APP</span> -->
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>																																							
+			
+			<div class="portfolio promotions" data-cat="promotions">
+				<div class="portfolio-wrapper">			
+					<iframe width="360" height="215" src="https://www.youtube.com/embed/fcIE7MUISeY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title" target="_blank" href="https://www.youtube.com/watch?v=fcIE7MUISeY">2018 Social Scene Promotional Reel</a>
+							<!-- <span class="text-category">Description</span> -->
+							<!-- <span class="text-category">APP</span> -->
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>														
+			
+			<div class="portfolio tequila" data-cat="tequila">
+				<div class="portfolio-wrapper">			
+					<iframe width="300" height="215" src="https://www.youtube.com/embed/R7lsPnKxuP8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title" target="_blank" href="https://www.youtube.com/watch?v=R7lsPnKxuP8">2018 Minneapolis Summer Tequila Tasting Festival</a>
+							<!-- <span class="text-category">Description</span> -->
+							<!-- <span class="text-category">APP</span> -->
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>				
+
+			<div class="portfolio weekly" data-cat="weekly">
+				<div class="portfolio-wrapper">			
+					<iframe width="300" height="215" src="https://www.youtube.com/embed/2ZHwx46iEGg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title" target="_blank" href="https://www.youtube.com/watch?v=2ZHwx46iEGg">Weekly Conquer 10 Every Action Is a Reflection Of You</a>
+							<!-- <span class="text-category">Description</span> -->
+							<!-- <span class="text-category">APP</span> -->
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>																	
+
+				<div class="portfolio whiskey" data-cat="whiskey">
+				<div class="portfolio-wrapper">			
+					<iframe width="300" height="215" src="https://www.youtube.com/embed/LMNGhlpmq-o" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title" target="_blank" href="https://www.youtube.com/watch?v=LMNGhlpmq-o">2018 Denver Summer Whiskey Tasting Festival</a>
+							<!-- <span class="text-category">Description</span> -->
+							<!-- <span class="text-category">APP</span> -->
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>												
+			
+			<div class="portfolio tequila" data-cat="tequila">
+				<div class="portfolio-wrapper">			
+					<iframe width="360" height="215" src="https://www.youtube.com/embed/4x0OInNVwi8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title" target="_blank" href="https://www.youtube.com/watch?v=LMNGhlpmq-o">2018 Chicago Summer Tequila Tasting Festival</a>
+							<!-- <span class="text-category">Description</span> -->
+							<!-- <span class="text-category">APP</span> -->
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>							
+
+			<div class="portfolio tequila" data-cat="tequila">
+				<div class="portfolio-wrapper">			
+					<iframe width="360" height="215" src="https://www.youtube.com/embed/zZYy5L_R2sc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title" target="_blank" href="https://www.youtube.com/watch?v=zZYy5L_R2sc">2018 Denver Summer Tequila Tasting Festival</a>
+							<!-- <span class="text-category">Description</span> -->
+							<!-- <span class="text-category">APP</span> -->
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>																								
+
+			<div class="portfolio weekly" data-cat="weekly">
+				<div class="portfolio-wrapper">			
+					<iframe width="360" height="215" src="https://www.youtube.com/embed/qhw_qjRUNHU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title" target="_blank" href="https://www.youtube.com/watch?v=zZYy5L_R2sc">Week 9 Weekly Conquer Connect To Solve</a>
+							<!-- <span class="text-category">Description</span> -->
+							<!-- <span class="text-category">APP</span> -->
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>			
+			
+			<div class="portfolio weekly" data-cat="weekly">
+				<div class="portfolio-wrapper">			
+					<iframe width="360" height="215" src="https://www.youtube.com/embed/N7ejfkeBJ9k" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title" target="_blank" href="https://www.youtube.com/watch?v=N7ejfkeBJ9k">Weekly Conquer 8 - Tamika Carlton</a>
+							<!-- <span class="text-category">Description</span> -->
+							<!-- <span class="text-category">APP</span> -->
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>																	
+
+			<div class="portfolio weekly" data-cat="weekly">
+				<div class="portfolio-wrapper">			
+					<iframe width="360" height="215" src="https://www.youtube.com/embed/r-FW8sIBpA8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title" target="_blank" href="https://www.youtube.com/watch?v=r-FW8sIBpA8">Week 8 Weekly Conquer Give Back Reset</a>
+							<!-- <span class="text-category">Description</span> -->
+							<!-- <span class="text-category">APP</span> -->
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>																	
+																									
+
+			<div class="portfolio weekly" data-cat="weekly">
+				<div class="portfolio-wrapper">			
+					<iframe width="360" height="215" src="https://www.youtube.com/embed/bwJhPG3U-eY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title" target="_blank" href="https://www.youtube.com/watch?v=bwJhPG3U-eY">Weekly Conquer 7 - Tamika Carlton
+							<!-- <span class="text-category">Description</span> -->
+							<!-- <span class="text-category">APP</span> -->
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>			
+			
+			<div class="portfolio weekly" data-cat="weekly">
+				<div class="portfolio-wrapper">			
+					<iframe width="360" height="215" src="https://www.youtube.com/embed/B7E-Y4Px694" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title" target="_blank" href="https://www.youtube.com/watch?v=B7E-Y4Px694">Weekly Conquer Week 6 Say No Today Yes To Tomorrow
+							<!-- <span class="text-category">Description</span> -->
+							<!-- <span class="text-category">APP</span> -->
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>									
+			
+			<div class="portfolio whiskey" data-cat="whiskey">
+				<div class="portfolio-wrapper">			
+					<iframe width="360" height="215" src="https://www.youtube.com/embed/bWQqs_uUvx4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title" target="_blank" href="https://www.youtube.com/watch?v=bWQqs_uUvx4">2018 Chicago Summer Whiskey Festival </a>
+							<!-- <span class="text-category">Description</span> -->
+							<!-- <span class="text-category">APP</span> -->
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>																		
+
+			
+			<div class="portfolio whiskey" data-cat="whiskey">
+				<div class="portfolio-wrapper">			
+					<iframe width="360" height="215" src="https://www.youtube.com/embed/R1ZjPRLHHkA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title" target="_blank" href="https://www.youtube.com/watch?v=R1ZjPRLHHkA">2018 Denver Summer Whiskey Festival </a>
+							<!-- <span class="text-category">Description</span> -->
+							<!-- <span class="text-category">APP</span> -->
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>																												
+			
+			<div class="portfolio weekly" data-cat="weekly">
+				<div class="portfolio-wrapper">			
+					<iframe width="360" height="215" src="https://www.youtube.com/embed/0Q_fAbIlI3k" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title" target="_blank" href="https://www.youtube.com/watch?v=0Q_fAbIlI3k">Weekly Conquer 5 </a>
+							<!-- <span class="text-category">Description</span> -->
+							<!-- <span class="text-category">APP</span> -->
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>																							
+			
+			<div class="portfolio weekly" data-cat="weekly">
+				<div class="portfolio-wrapper">			
+					<<iframe width="360" height="200" src="https://www.youtube.com/embed/Gi7gGCoctjI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title" target="_blank" href="https://www.youtube.com/watch?v=Gi7gGCoctjI">Week 5 Weekly Conquer Break To Create </a>
+							<!-- <span class="text-category">Description</span> -->
+							<!-- <span class="text-category">APP</span> -->
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>																							
+				
+
+			<div class="portfolio weekly" data-cat="weekly">
+				<div class="portfolio-wrapper">			
+					<iframe width="360" height="215" src="https://www.youtube.com/embed/D4XcvH-Zq5Q" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title" target="_blank" href="https://www.youtube.com/watch?v=D4XcvH-Zq5Q">Tamika Weekly Conquer 4</a>
+							<!-- <span class="text-category">Description</span> -->
+							<!-- <span class="text-category">APP</span> -->
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+
+				<div class="portfolio weekly" data-cat="weekly">
+				<div class="portfolio-wrapper">			
+					<iframe width="360" height="215" src="https://www.youtube.com/embed/l0Q_zXP1hpE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title" target="_blank" href="https://www.youtube.com/watch?v=l0Q_zXP1hpE">Weekly Conquer 4 - Where You Are Is Not Where You Can Be </a>
+							<!-- <span class="text-category">Description</span> -->
+							<!-- <span class="text-category">APP</span> -->
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="portfolio weekly" data-cat="weekly">
+				<div class="portfolio-wrapper">			
+					<iframe width="360" height="215" src="https://www.youtube.com/embed/isb4V4iABgE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title" target="_blank" href="https://www.youtube.com/watch?v=isb4V4iABgE">Weekly Conquer 3 William - Find Your Path To Finish</a>
+							<!-- <span class="text-category">Description</span> -->
+							<!-- <span class="text-category">APP</span> -->
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="portfolio weekly" data-cat="weekly">
+			 <div class="portfolio-wrapper">			
+					<iframe width="360" height="215" src="https://www.youtube.com/embed/yfRslV6xqkw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title" target="_blank" href="https://www.youtube.com/watch?v=isb4V4iABgE">Tamika - Weekly Conquer 3</a>
+							<!-- <span class="text-category">Description</span> -->
+							<!-- <span class="text-category">APP</span> -->
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="portfolio whiskey" data-cat="whiskey">
+			 <div class="portfolio-wrapper">			
+					<iframe width="360" height="215" src="https://www.youtube.com/embed/Xr_IfPNi1BQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title" target="_blank" href="https://www.youtube.com/watch?v=Xr_IfPNi1BQ">2018 Kansas City Spring Whiskey Festival</a>
+							<!-- <span class="text-category">Description</span> -->
+							<!-- <span class="text-category">APP</span> -->
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="portfolio tequila" data-cat="tequila">
+			 <div class="portfolio-wrapper">			
+					<iframe width="360" height="215" src="https://www.youtube.com/embed/-VmitLkHGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title" target="_blank" href="https://www.youtube.com/watch?v=-VmitLkHGz0">2018 Chicago Spring Tequila Festival</a>
+							<!-- <span class="text-category">Description</span> -->
+							<!-- <span class="text-category">APP</span> -->
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="portfolio weekly" data-cat="weekly">
+			 <div class="portfolio-wrapper">			
+					<iframe width="360" height="215" src="https://www.youtube.com/embed/Kkmmqdiuohs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title" target="_blank" href="https://www.youtube.com/watch?v=Kkmmqdiuohs">Weekly Conquer 2 June 1 Plan Process System</a>
+							<!-- <span class="text-category">Description</span> -->
+							<!-- <span class="text-category">APP</span> -->
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="portfolio weekly" data-cat="weekly">
+			 <div class="portfolio-wrapper">			
+					<iframe width="360" height="215" src="https://www.youtube.com/embed/MrxIkiuKM7o" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title" target="_blank" href="https://www.youtube.com/watch?v=MrxIkiuKM7o">Weekly Conquer 2 June 1 Plan Process System</a>
+							<!-- <span class="text-category">Description</span> -->
+							<!-- <span class="text-category">APP</span> -->
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="portfolio weekly" data-cat="weekly">
+			 <div class="portfolio-wrapper">			
+					<iframe width="360" height="215" src="https://www.youtube.com/embed/nrRCv2gcWcY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title" target="_blank" href="https://www.youtube.com/watch?v=nrRCv2gcWcY">Tamika - Weekly Conquer</a>
+							<!-- <span class="text-category">Description</span> -->
+							<!-- <span class="text-category">APP</span> -->
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="portfolio tequila" data-cat="tequila">
+			 <div class="portfolio-wrapper">			
+					<iframe width="360" height="215" src="https://www.youtube.com/embed/-LjWl_Qp2S0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title" target="_blank" href="https://www.youtube.com/watch?v=-LjWl_Qp2S0">Message From Our Co-Founder William Covering Spring Tequila Festival 2018</a>
+							<!-- <span class="text-category">Description</span> -->
+							<!-- <span class="text-category">APP</span> -->
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="portfolio whiskey" data-cat="whiskey">
+			 <div class="portfolio-wrapper">			
+					<iframe width="360" height="215" src="https://www.youtube.com/embed/S2JAhgd6BAk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title" target="_blank" href="https://www.youtube.com/watch?v=S2JAhgd6BAk">I Heart Bourbon Indianapolis 2018</a>
+							<!-- <span class="text-category">Description</span> -->
+							<!-- <span class="text-category">APP</span> -->
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="portfolio wine" data-cat="wine">
+			 <div class="portfolio-wrapper">			
+					<iframe width="360" height="215" src="https://www.youtube.com/embed/OLtglShJexs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title" target="_blank" href="https://www.youtube.com/watch?v=OLtglShJexs">Minneapolis Spring Wine Festival 2018</a>
+							<!-- <span class="text-category">Description</span> -->
+							<!-- <span class="text-category">APP</span> -->
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="portfolio wine" data-cat="wine">
+			 <div class="portfolio-wrapper">			
+					<iframe width="260" height="215" src="https://www.youtube.com/embed/fE5JyYlYDKs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title" target="_blank" href="https://www.youtube.com/watch?v=fE5JyYlYDKs">Chicago Spring Wine Festival 2018</a>
+							<!-- <span class="text-category">Description</span> -->
+							<!-- <span class="text-category">APP</span> -->
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+							
+			<div class="portfolio whiskey" data-cat="whiskey">
+			 <div class="portfolio-wrapper">			
+					<iframe width="360" height="215" src="https://www.youtube.com/embed/4I52NmCORY8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title" target="_blank" href="https://www.youtube.com/watch?v=4I52NmCORY8">Whiskey Festival Promo Video - Without Text</a>
+							<!-- <span class="text-category">Description</span> -->
+							<!-- <span class="text-category">APP</span> -->
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+							
+				<div class="portfolio tequila" data-cat="tequila">
+			 <div class="portfolio-wrapper">			
+					<iframe width="360" height="215" src="https://www.youtube.com/embed/ELef9XWgmCw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title" target="_blank" href="https://www.youtube.com/watch?v=ELef9XWgmCw">Tequila Festival Promo Video - Without Text</a>
+							<!-- <span class="text-category">Description</span> -->
+							<!-- <span class="text-category">APP</span> -->
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="portfolio tequila" data-cat="tequila">
+			 <div class="portfolio-wrapper">			
+					<iframe width="360" height="215" src="https://www.youtube.com/embed/B0zcHgtu2y4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title" target="_blank" href="https://www.youtube.com/watch?v=B0zcHgtu2y4">2018 Spring Wine Festival</a>
+							<!-- <span class="text-category">Description</span> -->
+							<!-- <span class="text-category">APP</span> -->
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="portfolio bar" data-cat="bar">
+			 <div class="portfolio-wrapper">			
+					<iframe width="360" height="215" src="https://www.youtube.com/embed/g9fpmHFcBS8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title" target="_blank" href="https://www.youtube.com/watch?v=g9fpmHFcBS8">2018 Indianapolis St Pats Bar Crawl</a>
+							<!-- <span class="text-category">Description</span> -->
+							<!-- <span class="text-category">APP</span> -->
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>	
+
+			<div class="portfolio bar" data-cat="bar">
+			  <div class="portfolio-wrapper">			
+				<iframe width="360" height="215" src="https://www.youtube.com/embed/czhtDazbVbk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			    	<div class="label">
+						<div class="label-text">
+						<a class="text-title" target="_blank" href="https://www.youtube.com/watch?v=czhtDazbVbk">2018 St Pats Bar Crawl Introduction Video</a>
+							<!-- <span class="text-category">Description</span> -->
+							<!-- <span class="text-category">APP</span> -->
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>	
+
+			<div class="portfolio whiskey" data-cat="whiskey">
+			  <div class="portfolio-wrapper">			
+				<iframe width="360" height="215" src="https://www.youtube.com/embed/2kEKeAJ9ZNk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			    	<div class="label">
+						<div class="label-text">
+						<a class="text-title" target="_blank" href="https://www.youtube.com/watch?v=2kEKeAJ9ZNk">2018 St Pats Whiskey Tasting Introduction Video</a>
+							<!-- <span class="text-category">Description</span> -->
+							<!-- <span class="text-category">APP</span> -->
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>	
+
+			<div class="portfolio tequila" data-cat="tequila">
+			  <div class="portfolio-wrapper">			
+				<iframe width="360" height="215" src="https://www.youtube.com/embed/alrJx1nGijk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			    	<div class="label">
+						<div class="label-text">
+						<a class="text-title" target="_blank" href="https://www.youtube.com/watch?v=alrJx1nGijk">2018 Chicago Winter Tequila Festival Video</a>
+							<!-- <span class="text-category">Description</span> -->
+							<!-- <span class="text-category">APP</span> -->
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>		
+
+			<div class="portfolio whiskey" data-cat="whiskey">
+			  <div class="portfolio-wrapper">			
+				<iframe width="360" height="215" src="https://www.youtube.com/embed/eLW1w-Dbq2c" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			    	<div class="label">
+						<div class="label-text">
+						<a class="text-title" target="_blank" href="https://www.youtube.com/watch?v=eLW1w-Dbq2c">2018 Winter Whiskey Festival Chicago</a>
+							<!-- <span class="text-category">Description</span> -->
+							<!-- <span class="text-category">APP</span> -->
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>	
+
+			<div class="portfolio whiskey" data-cat="whiskey">
+			  <div class="portfolio-wrapper">			
+				<iframe width="360" height="215" src="https://www.youtube.com/embed/Nq8GZ-hvOCA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			    	<div class="label">
+						<div class="label-text">
+						<a class="text-title" target="_blank" href="https://www.youtube.com/watch?v=Nq8GZ-hvOCA">2018 Denver Winter Whiskey Festival 1/27 </a>
+							<!-- <span class="text-category">Description</span> -->
+							<!-- <span class="text-category">APP</span> -->
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="portfolio bar" data-cat="bar">
+			  <div class="portfolio-wrapper">			
+				<iframe width="360" height="215" src="https://www.youtube.com/embed/Nq8GZ-hvOCA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			    	<div class="label">
+						<div class="label-text">
+						<a class="text-title" target="_blank" href="https://www.youtube.com/watch?v=Nq8GZ-hvOCA">2018 Denver Winter Whiskey Festival 1/27</a>
+							<!-- <span class="text-category">Description</span> -->
+							<!-- <span class="text-category">APP</span> -->
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>			
+								
+
+						
+							
+																						
+							
+										
+			
+		</div>
+		<br>
+		<div class="loadmore"></div>	
+		
+	</div><!-- container -->
+
+	
+
+</body>
+</html>
